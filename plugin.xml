@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="com.leokwsw.foldable" version="0.1.0">
+    <name>FoldableLayout</name>
+    <license>MIT</license>
+    <engines>
+        <engine name="cordova-android" version=">=14.0.0" />
+        <engine name="cordova-ios" version=">=8.0.0" />
+    </engines>
+    <js-module src="www/layout.js" name="layout" />
+    <js-module src="www/cordova.js" name="cordova">
+        <clobbers target="FoldableLayout" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="FoldableLayout">
+                <param name="android-package" value="com.leokwsw.foldable.CordovaFoldableLayout" />
+            </feature>
+        </config-file>
+        <framework src="androidx.window:window-java:1.4.0" />
+        <source-file src="android/src/main/kotlin/com/leokwsw/foldable/FoldMonitor.kt" target-dir="app/src/main/kotlin/com/leokwsw/foldable" />
+        <source-file src="android/cordova/CordovaFoldableLayout.kt" target-dir="app/src/main/kotlin/com/leokwsw/foldable" />
+    </platform>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="FoldableLayout">
+                <param name="ios-package" value="CordovaFoldableLayout" />
+            </feature>
+        </config-file>
+        <source-file src="ios/Sources/FoldableLayoutPlugin/FoldMonitor.swift" />
+        <source-file src="ios/cordova/CordovaFoldableLayout.swift" />
+    </platform>
+</plugin>
