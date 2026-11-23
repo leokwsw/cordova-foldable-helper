@@ -1,25 +1,57 @@
 {
   "name": "@leokwsw/cordova-foldable-helper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fold posture, hinge geometry and layout insets for Cordova and Capacitor",
   "license": "MIT",
-  "keywords": ["cordova", "cordova-android", "cordova-ios", "capacitor", "ionic", "foldable"],
+  "keywords": [
+    "cordova",
+    "cordova-android",
+    "cordova-ios",
+    "capacitor",
+    "ionic",
+    "foldable"
+  ],
   "main": "index.js",
   "types": "index.d.ts",
-  "files": ["android", "ios", "www", "index.js", "index.d.ts", "plugin.xml", "Package.swift", "LeokwswCordovaFoldableHelper.podspec", "README.zh-TW.md"],
+  "files": [
+    "android",
+    "ios",
+    "www",
+    "index.js",
+    "index.d.ts",
+    "plugin.xml",
+    "Package.swift",
+    "LeokwswCordovaFoldableHelper.podspec",
+    "README.zh-TW.md"
+  ],
   "cordova": {
     "id": "com.leokwsw.foldable",
-    "platforms": ["android", "ios"]
+    "platforms": [
+      "android",
+      "ios"
+    ]
   },
   "capacitor": {
-    "android": { "src": "android" },
-    "ios": { "src": "ios/Sources/FoldableLayoutPlugin" }
+    "android": {
+      "src": "android"
+    },
+    "ios": {
+      "src": "ios/Sources/FoldableLayoutPlugin"
+    }
   },
   "peerDependencies": {
     "@capacitor/core": "^8.0.0"
   },
   "peerDependenciesMeta": {
-    "@capacitor/core": { "optional": true }
+    "@capacitor/core": {
+      "optional": true
+    }
   },
-  "scripts": { "test": "node --test" }
+  "scripts": {
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leokwsw/cordova-foldable-helper.git"
+  }
 }
